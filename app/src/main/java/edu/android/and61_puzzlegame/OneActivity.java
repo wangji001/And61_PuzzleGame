@@ -43,11 +43,13 @@ public class OneActivity extends AppCompatActivity {
             image = new int[]{R.drawable.a5_001, R.drawable.a5_002, R.drawable.a5_003, R.drawable.a5_004,
                     R.drawable.a5_005, R.drawable.a5_006, R.drawable.a5_007, R.drawable.a5_008, R.drawable.a5_009};
 
+
             binding.correctImageView.setImageResource(R.drawable.a5);
         } else if (image_id.equals("b5")) {
             image = new int[] {R.drawable.b5_001, R.drawable.b5_002, R.drawable.b5_003, R.drawable.b5_004,
                     R.drawable.b5_005, R.drawable.b5_006, R.drawable.b5_007, R.drawable.b5_008, R.drawable.b5_009};
 
+            
             binding.correctImageView.setImageResource(R.drawable.b5);
         }
 
