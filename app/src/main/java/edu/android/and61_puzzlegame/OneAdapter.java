@@ -21,11 +21,7 @@ class OneAdapter extends RecyclerView.Adapter<OneAdapter.OneHolder> {
     private Context context;
 
     private int width = 0, height = 0;
-    int[] imgs = new int[]{
-            R.drawable.imag1, R.drawable.imag2, R.drawable.imag3,
-            R.drawable.imag4, R.drawable.imag5, R.drawable.imag6,
-            R.drawable.imag7, R.drawable.imag8, R.drawable.imag9
-    };
+    int[] imgs;
 
     public OneAdapter(Activity activity) {
         this.activity = activity;
