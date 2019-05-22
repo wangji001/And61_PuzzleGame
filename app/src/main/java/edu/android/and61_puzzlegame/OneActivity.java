@@ -1,8 +1,8 @@
 package edu.android.and61_puzzlegame;
 
 
-import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,7 +37,10 @@ public class OneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_one);
 
-        String image_id = getIntent().getStringExtra(IMAGE_ID);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.colorDarkBlue)));
+        getWindow().setStatusBarColor(getResources().getColor(R.color.colorDarkBlue));
+
+       String image_id = getIntent().getStringExtra(IMAGE_ID);
 
         if(image_id.equals("a5")) {
             image = new int[]{R.drawable.a5_001, R.drawable.a5_002, R.drawable.a5_003, R.drawable.a5_004,
@@ -91,8 +94,8 @@ public class OneActivity extends AppCompatActivity {
         });
 
 
-        binding.restartBtn.setOnClickListener(view -> recreate());
-    }
+        binding.btnRestart.setOnClickListener(view -> recreate());
+    } // end onCreate()
 
     RecyclerView.OnItemTouchListener itemTouchListener = new RecyclerView.OnItemTouchListener() {
         @Override
@@ -106,12 +109,14 @@ public class OneActivity extends AppCompatActivity {
                 if (newPos != -100) {
                     adapter.change(pos, newPos);
                 }
+
                 int good_job = 0;
                 for (int i = 0; i < mOne.size(); i++) {
                     if (i == mOne.get(i).getTag()) {
                         good_job++;
                     }
                 }
+
                 if (good_job == mOne.size()) {
                     Vector<One> one = adapter.currentOne();
                     for (int i = 0; i < one.size(); i++) {
@@ -123,19 +128,20 @@ public class OneActivity extends AppCompatActivity {
                         }
                     }
                     Toast.makeText(OneActivity.this, "참 잘했어요.", Toast.LENGTH_SHORT).show();
-                }
-            }
+                } // end if
+            } // end if
             return false;
-        }
+        } // end onInterceptTouchEvent()
 
         @Override
         public void onTouchEvent(@NonNull RecyclerView recyclerView, @NonNull MotionEvent motionEvent) {
 
-        }
+        } // end onTouchEvent()
 
         @Override
         public void onRequestDisallowInterceptTouchEvent(boolean b) {
 
         }
-    };
-}
+    }; // itemTouchListener
+
+} // end class OneActivity
