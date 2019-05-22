@@ -6,12 +6,12 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".one.OneActivity">
+        tools:context=".game4_one.OneActivity">
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/oneLayout"
-            android:layout_width="406dp"
-            android:layout_height="433dp"
+            android:layout_width="408dp"
+            android:layout_height="425dp"
             android:background="@color/colorDarkBlue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
@@ -29,6 +29,7 @@
                 android:overScrollMode="never"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.888"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
@@ -42,6 +43,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="124dp"
             android:layout_marginBottom="8dp"
+            android:src="@drawable/game4_a5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +61,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/correctImageView"
             app:layout_constraintTop_toBottomOf="@+id/btnRestart"
-            app:srcCompat="@drawable/exit" />
+            app:srcCompat="@drawable/game4_exit" />
 
         <ImageButton
             android:id="@+id/btnRestart"
@@ -70,6 +72,6 @@
             android:background="#F9F9F9"
             app:layout_constraintStart_toEndOf="@+id/correctImageView"
             app:layout_constraintTop_toTopOf="@+id/correctImageView"
-            app:srcCompat="@drawable/restart" />
+            app:srcCompat="@drawable/game4_restart" />
     </android.support.constraint.ConstraintLayout>
 </layout>

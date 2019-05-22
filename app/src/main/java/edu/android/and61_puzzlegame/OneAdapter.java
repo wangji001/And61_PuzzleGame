@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import java.util.Vector;
 
-import edu.android.and61_puzzlegame.databinding.ItemOneBinding;
+import edu.android.and61_puzzlegame.databinding.ItemGame4OneBinding;
 
 
 class OneAdapter extends RecyclerView.Adapter<OneAdapter.OneHolder> {
@@ -31,13 +31,13 @@ class OneAdapter extends RecyclerView.Adapter<OneAdapter.OneHolder> {
     @NonNull
     @Override
     public OneHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ItemOneBinding binding = ItemOneBinding.inflate(LayoutInflater.from(context), parent, false);
+        ItemGame4OneBinding binding = ItemGame4OneBinding.inflate(LayoutInflater.from(context), parent, false);
         return new OneHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull OneHolder holder, int position) {
-        ItemOneBinding binding = holder.binding;
+        ItemGame4OneBinding binding = holder.binding;
         if (width != 0 && height != 0) {
             binding.itemCardView.getLayoutParams().width = width;
             binding.itemCardView.getLayoutParams().height = height;
@@ -84,9 +84,9 @@ class OneAdapter extends RecyclerView.Adapter<OneAdapter.OneHolder> {
 
     class OneHolder extends RecyclerView.ViewHolder {
 
-        ItemOneBinding binding;
+        ItemGame4OneBinding binding;
 
-        OneHolder(ItemOneBinding binding) {
+        OneHolder(ItemGame4OneBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }

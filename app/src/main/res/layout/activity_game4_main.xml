@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/a5" />
+        app:srcCompat="@drawable/game4_a5" />
 
     <TextView
         android:id="@+id/textName"
@@ -42,7 +42,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/button_background"
+        android:background="@drawable/game4_button_background"
         android:text="START GAME"
         android:textColor="@color/colorWhite"
         android:textSize="24sp"
@@ -63,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:srcCompat="@drawable/next" />
+        app:srcCompat="@drawable/game4_next" />
 
     <ImageButton
         android:id="@+id/btnPrev"
@@ -80,6 +80,6 @@
         app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/game4_back" />
 
 </android.support.constraint.ConstraintLayout>

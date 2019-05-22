@@ -10,20 +10,26 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     public static final String IMAGE_ID = "image_id";
+    public static final String GAME1 = "쿠키 3x3";
+    public static final String GAME2 = "겨울왕국 3x3";
+    public static final String GAME3 = "해바라기 3x3";
+    public static final String GAME4 = "점심식사 4x4";
+    public static final String GAME5 = "개선문 4x4";
 
     private ImageView imageView;
     private int index;
     private TextView textName;
 
-    private static final int[] IMAGE_LIST = {R.drawable.a5, R.drawable.b5};
-    private static final String[] NAME_LIST = {"a5", "b5"}
-;
+    private static final int[] IMAGE_LIST = {R.drawable.game4_a5, R.drawable.game4_b5, R.drawable.game4_c5, R.drawable.game4_d5, R.drawable.game4_e5 };
+    private static final String[] NAME_LIST = {GAME1, GAME2, GAME3, GAME4, GAME5};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_game4_main);
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.colorDarkBlue)));
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorDarkBlue));
